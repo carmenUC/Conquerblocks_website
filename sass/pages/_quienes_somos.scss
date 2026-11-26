@@ -1,0 +1,38 @@
+@use "../abstracts/abstracts" as a;
+
+.about-page {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 16px;
+
+    &__title {
+        font-size: 25px;
+        font-weight: 700;
+        color: a.$color-text;
+    }
+
+    &__description {
+        font-size: 15px;
+        line-height: 1.6;
+        color: a.$color-text;
+        padding-bottom: 10px;
+        text-align: justify;
+        
+        background-image: linear-gradient(white, white);
+        background-size: calc(100%) 1px;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+    }
+
+    &__img-container {
+        width: 100%;
+       
+    }
+
+    &__image {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}

@@ -1,0 +1,85 @@
+
+@use "../abstracts/abstracts" as a;
+
+.course-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px 16px;
+    @include a.breakpoint(desktopxl) {
+        padding: 40px 200px;
+    
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__title {
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 1.2;
+        color: a.$color-text;
+        text-align: center;
+    }
+
+    &__subtitle {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.4;
+        color: a.$color-accent-green;
+        text-align: center;
+    }
+
+    &__img-container {
+        width: 100%;
+        padding: 10px;
+        overflow: hidden;
+        border: 1px solid a.$color-accent-blue;
+        border-radius: 10px;
+        @include a.breakpoint(tablet) {
+            width: 70%;
+            display: flex;
+            margin: 0 auto;
+
+        }
+
+        @include a.breakpoint(desktopxl) {
+            width: 50%;
+
+        }
+    }
+
+    &__image {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    &__intro {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.6;
+        color: a.$color-text;
+        text-align: justify;
+    }
+
+    &__description {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        font-size: 16px;
+        line-height: 1.6;
+        color: a.$color-text;
+        text-align: justify;
+    }
+}

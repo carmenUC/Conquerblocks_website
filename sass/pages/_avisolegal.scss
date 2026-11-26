@@ -1,0 +1,43 @@
+@use "../abstracts/abstracts" as a;
+
+.legal {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px 16px;
+    @include a.breakpoint(desktopxl){
+        padding: 40px 100px;
+
+    } 
+
+    &__title {
+        font-size: 20px;
+        font-weight: 700;
+        color: a.$color-text;
+        text-align: left;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        font-size: 15px;
+    }
+
+    &__article {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        font-size: 16px;
+        line-height: 1.6;
+        color: a.$color-text;
+        text-align: justify;
+    }
+
+    &__subtitle {
+        font-size: 18px;
+        font-weight: 600;
+        color: a.$color-accent-green;
+        text-align: left;
+    }
+}

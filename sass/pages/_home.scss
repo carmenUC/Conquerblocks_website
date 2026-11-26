@@ -1,0 +1,18 @@
+@use "../abstracts/abstracts" as a;
+
+.about__title,
+.courses__title,
+.blog__title {
+    @include a.section-title;
+}
+
+.about__number,
+.courses__number,
+.blog__number {
+    @include a.section-number;
+}
+
+.about__descripcion, 
+.courses__descripcion {
+    @include a.section-description;
+}

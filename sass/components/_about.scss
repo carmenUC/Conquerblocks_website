@@ -1,0 +1,49 @@
+@use "../abstracts/abstracts" as a;
+
+.about {
+    display: flex;
+    flex-direction: column;
+    gap: 15pX;
+    padding: 30px 16px;
+
+    background-image: linear-gradient(white, white);
+    background-size: calc(100% - 32px) 1px;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+
+    @include a.breakpoint(tablet) {
+        align-items: center;
+        text-align: center;
+    }
+
+    &__title {
+        font-size: 25px;
+        @include a.breakpoint(desktopxl) {
+            justify-content: center;
+        }
+
+    }
+    
+    &__description { 
+        font-size: 16px;
+        align-self: center;
+        padding-bottom: 15px;
+
+    }
+
+    &__button {
+        @include a.button;  
+      
+        }
+    
+     @include a.breakpoint(tablet) {
+        &__title, &__description{
+            width: 700px;
+        &__button {
+            align-self: center;
+        }
+    }
+}
+
+}
+

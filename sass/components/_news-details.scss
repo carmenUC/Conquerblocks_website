@@ -1,0 +1,75 @@
+@use "../abstracts/abstracts" as a;
+
+.news-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px 16px;
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    &__title {
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 1.2;
+        color: a.$color-text;
+        text-align: center;
+        @include a.breakpoint(desktopxl) {
+            max-width: 800px;
+            align-self: center;        } 
+
+    }
+
+    &__img-container {
+        width: 100%;
+        overflow: hidden;
+        border-radius: 10px;
+        @include a.breakpoint(desktopxl) {
+            width: 60%;
+            margin: 0 auto;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    }
+
+    &__image {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        font-size: 16px;
+        line-height: 1.6;
+        color: a.$color-text;
+        text-align: justify;
+        @include a.breakpoint(desktopxl) {
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+
+    }
+
+    &__subtitle {
+        font-size: 24px;
+        font-weight: 700;
+        color: a.$color-accent-green;
+        text-align: left;
+    }
+
+    &__link {
+        color: a.$color-accent-green;
+        text-decoration: underline;
+
+        &:hover {
+            color: a.$color-accent-blue;
+        }
+    }
+}

@@ -1,0 +1,77 @@
+@use "../abstracts/abstracts" as a;
+
+.hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 40px 16px 35px 16px;
+
+    background-image: linear-gradient(white, white);
+    background-size: calc(100% - 32px) 1px;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+
+    &__title {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.2;
+        letter-spacing: 0.8px;
+        color: a.$color-text;
+        position: absolute;
+        top: 60px;
+        left: 35px;
+        @include a.breakpoint(tablet) {
+            top: 90px;
+            left: 90px;
+            font-size: 40px;
+
+        }
+        @include a.breakpoint(desktopxl) {
+            position: absolute;
+            top: 130px;
+            left: 225px;
+            font-size: 70px;
+
+        }
+    }
+
+    &__description {
+        font-size: 11px;
+        line-height: 1.6;
+        color: a.$color-text;
+        position: absolute;
+        top: 145px;
+        left: 35px;
+        text-align: center;
+        width: 300px;
+
+        @include a.breakpoint(tablet) {
+            position: absolute;
+            top: 270px;
+            left: 135px;
+            font-size: 20px;
+            width: 500px;
+            
+        }
+
+        @include a.breakpoint(desktopxl) {
+            position: absolute;
+            top: 480px;
+            left: 290px;
+            font-size: 40px;
+            width: 900px;
+            
+        }
+    }
+
+    &__img-container {
+        width: 100%;
+    }
+
+    &__image {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}

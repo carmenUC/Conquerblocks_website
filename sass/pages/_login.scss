@@ -1,0 +1,21 @@
+@use "../abstracts/abstracts" as a;
+
+.login {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px 16px;
+
+    &__title {
+        font-size: 30px;
+        font-weight: 700;
+        color: a.$color-text;
+        text-align: center;
+    }
+
+    .form {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}

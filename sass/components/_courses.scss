@@ -1,0 +1,85 @@
+@use "../abstracts/abstracts" as a;
+
+.courses {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 30px 16px;
+   
+
+    background-image: linear-gradient(white, white);
+    background-size: calc(100% - 32px) 1px;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+
+     @include a.breakpoint(tablet) {
+        padding-left:40px;
+        padding-right:40px;
+    }
+
+    &__title {
+        font-size: 25px;
+        @include a.breakpoint(tablet) {
+        align-self: center;
+        }
+    }
+    
+    &__description { 
+        font-size: 16px;
+        align-self: center;
+
+    }
+
+    &__button {
+        @include a.button;
+    }
+
+    &__link {
+        @include a.link;
+    }
+
+    &__footer {
+        width: 200px;
+        align-self: center;
+        text-align: center;
+        border: solid 2px white;
+        padding: 10px;
+
+    }
+
+    &__container {
+        @include a.breakpoint(tablet) {
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+    }
+}
+
+}
+
+.course-card {
+    @include a.breakpoint(tablet) {
+        border: 1px solid white;
+        padding: 20px;
+        flex: 1;
+    }
+
+    &__title {
+        color: a.$color-accent-blue;
+        padding-bottom: 10px;
+    }
+
+    &__button {
+        @include a.button;
+        display: inline-block;
+        margin: 20px 0px 40px 0px;
+        @include a.breakpoint(tablet) {
+            margin-bottom: 10px;
+        
+        
+        }
+
+
+    }
+}
+

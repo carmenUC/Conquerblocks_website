@@ -1,0 +1,59 @@
+@use "../abstracts/abstracts" as a;
+.main__registro {
+    @include a.breakpoint(desktopxl){
+        padding: 30px 200px;
+    }
+}
+.register {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px 16px;
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    &__title {
+        font-size: 30px;
+        font-weight: 700;
+        color: a.$color-text;
+        text-align: center;
+    }
+
+    &__description {
+        font-size: 16px;
+        line-height: 1.6;
+        color: a.$color-text;
+        text-align: center;
+    }
+}
+
+.form {
+    &__fieldset {
+        padding: 20px;
+        border: 1px solid a.$color-accent-blue;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+    
+    &__button {
+        @include a.button;
+        background-color: grey;
+        margin-top: 10px;
+    }
+
+    &__legend {
+        color: a.$color-accent-green;
+        font-size: 20px;
+    }
+
+    &__textarea {
+    width: 80%;
+    resize: vertical;
+    max-height: 80px;
+}
+
+}

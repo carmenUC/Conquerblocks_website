@@ -1,0 +1,106 @@
+@use "../abstracts/abstracts" as a;
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 16px;
+    background-color: a.$color-background;
+
+    background-image: linear-gradient(white, white);
+    background-size: calc(100% - 32px) 1px;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+
+    &__logo {
+        width: 300px;
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__nav {
+        display: none;
+        @include a.breakpoint(desktopxl) {
+        display: block;
+        }
+    }
+
+    &__menu {
+        position: relative;
+        @include a.breakpoint(desktopxl) {
+        display: none;
+        }
+}
+
+    &__menu-toggle {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        list-style: none;
+
+    &::-webkit-details-marker {
+        display: none;
+    }
+
+    img {
+        display: block;
+        width: 32px;
+        height: 32px;
+    }
+}
+
+    &__mobile-nav {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 220px;
+        padding: 20px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        background-color: a.$color-background;
+        border: 1px solid a.$color-accent-green;
+        border-radius: 8px;
+        z-index: 10;
+
+        a {
+            color: a.$color-text;
+            text-decoration: none;
+
+        &:hover {
+            color: a.$color-accent-green;
+        }
+    }
+}
+
+    &__list {
+
+    @include a.reset-list;
+
+    @include a.breakpoint(desktopxl) {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+    &__link {
+
+        @include a.breakpoint(desktopxl) {
+            color: a.$color-text;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+
+            &:hover {
+            color: a.$color-accent-green;
+        }
+    }
+}
+}
