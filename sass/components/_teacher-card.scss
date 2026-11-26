@@ -15,8 +15,16 @@
         width: 100%;
         overflow: hidden;
         border-radius: 8px;
-         @include a.breakpoint(desktopxl) {
-            width: 30%;
+        @include a.breakpoint(tablet) {
+            width: 60%;
+            margin: 0 auto;
+            margin-bottom: 30px;
+
+         }
+
+        @include a.breakpoint(desktopxl) {
+            width: 60%;
+            margin-bottom: 30px;
          }
     }
 
