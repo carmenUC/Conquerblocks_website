@@ -20,8 +20,8 @@
     color: a.$color-text;
 
     position: absolute;
-    top: 12%;
-    left: 8%;
+    top: 35%;
+    left: 50%;
 
     @include a.breakpoint(tablet) {
         font-size: 40px;
@@ -39,7 +39,7 @@
     text-align: center;
 
     position: absolute;
-    top: 45%;
+    top: 70%;
     left: 50%;
     transform: translateX(-50%);
     width: 80%;
